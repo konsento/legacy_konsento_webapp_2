@@ -1,11 +1,14 @@
-%md-list.threads-list{layout: "column", flex: true}
-  %md-list-item.md-2-line{ng-repeat: "thread in threads"}
-    %div.md-avatar
-      %p
-        {{thread.votes}}
-    %a{ng-href: "/"}
-      %div.md-list-item-text
-        %h3
-          {{thread.title}}
-        %p
-          {{thread.desc}}
+%div.threads-list{layout: "row"}
+  %md-card{flex: 70, offset:15}
+    %md-card-content
+      %md-list{layout: "column", flex: true}
+        %md-list-item.md-2-line{ng-repeat: "thread in threads"}
+          %div.md-avatar
+            %p
+              {{thread.votes}}
+          %a{ng-href: "/"}
+            %div.md-list-item-text
+              %h3
+                {{thread.title}}
+              %p
+                {{thread.desc}}

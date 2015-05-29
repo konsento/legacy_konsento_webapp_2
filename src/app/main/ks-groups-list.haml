@@ -1,5 +1,8 @@
-%md-list.groups-list{layout: "column", flex: true}
-    %md-list-item.md-2-line{ng-repeat: "group in groups", flex: true}
-      %a.md-list-item-text{ng-href: "#/group", ng-class: "md-offset", layout-padding: true}
-        %h3 {{group.title}}
-        %p {{group.desc}}
+%div.subgroups-list{layout: "row"}
+  %md-card{flex: 70, offset:15}
+    %md-card-content
+      %md-list.groups-list{layout: "column", flex: true}
+        %md-list-item.md-2-line{ng-repeat: "group in groups", flex: true}
+          %a.md-list-item-text{ng-href: "#/group", ng-class: "md-offset", layout-padding: true}
+            %h3 {{group.title}}
+            %p {{group.desc}}

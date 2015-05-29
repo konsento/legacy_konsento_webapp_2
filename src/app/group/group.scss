@@ -1,19 +1,34 @@
 #content {
-  .threads-list md-list-item {
-    a {
-      text-decoration: none;
+  .threads-list{
+    md-list-item {
+      a {
+        text-decoration: none;
+      }
     }
-  }
-  .threads-list md-list-item:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+    md-list-item:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+    md-card-content {
+      padding: 0px
+    }
   }
 
-  .subgroups-list md-list-item {
-    a {
-      text-decoration: none;
+  .subgroups-list{
+    md-list-item {
+      a {
+        text-decoration: none;
+      }
+    }
+    md-list-item:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+    md-card-content {
+      padding: 0px
     }
   }
-  .subgroups-list md-list-item:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+
+
+  md-tabs-content-wrapper{
+    background:$light-gray-bg;
   }
 }
