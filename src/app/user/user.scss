@@ -6,5 +6,16 @@
     text-align: center;
     font-size: 28px;
     color: $navy-blue;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
+
+  md-input-container .user{
+      padding-bottom: 0px;
+    }
+
+  md-input-container   .pass{
+    padding-bottom: 10px
+  }
+
 }
