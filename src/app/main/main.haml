@@ -1,0 +1,27 @@
+%div{layout: "column", flex: true}
+  %div{ng-include: "'/app/components/header/header.html'"}
+
+  %div#content{layout: "column", flex: true}
+    %md-toolbar{md-theme: "blue"}
+      %div.md-toolbar-tools
+        %h2.md-flex.breadcrumbs
+          %a{ng-href:"/#"}
+            Global
+        %span{flex: true}
+        %md-input-container#search-group-holder.md-hue-1{md-theme: "blue", md-no-float: true }
+          %input{ng-model: "search", placeholder: "Buscar"}
+        %md-button{aria-label: "Search"}
+          %md-icon{md-svg-icon: "search"}
+
+    %md-content
+      %md-tabs{md-selected: "data.selectedIndex", md-align-tabs: "{{data.bottom ? 'bottom' : 'top'}}"}
+        %md-tab#groups
+          %md-tab-label
+            Grupos
+          %md-tab-body
+            %div{layout: "row"}
+              %md-list.groups-list{layout: "column", flex: true}
+                %md-list-item.md-2-line{ng-repeat: "group in groups", flex: true}
+                  %a.md-list-item-text{ng-href: "#/group", ng-class: "md-offset", layout-padding: true}
+                    %h3 {{group.title}}
+                    %p {{group.desc}}

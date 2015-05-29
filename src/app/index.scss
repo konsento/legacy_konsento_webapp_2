@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500);
+
+html {
+  font-family: 'Maven Pro', serif;
+}
+div[ui-view] {
+  min-height: 100%;
+}
+
+#content {
+  background: #fff;
+}
+
+h2.breadcrumbs {
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  a:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .separator {
+    md-icon {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  a.current {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+#search-group-holder {
+  margin-top: 28px;
+  input {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  /* do not group these rules */
+  input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  input:-ms-input-placeholder { /* IE10+ */
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+md-tabs.md-default-theme {
+  md-ink-bar {
+    color: #0D47A1;
+    background: #0D47A1;
+  }
+}
+
+#content {
+  .groups-list md-list-item {
+    a {
+      text-decoration: none;
+    }
+  }
+  .groups-list md-list-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

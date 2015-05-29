@@ -1,0 +1,23 @@
+%header{layout: "row"}
+  %div.brand{layout: "row", flex: true, layout-align: "start center", layout-padding: true}
+    %a{ng-href: "#"}
+      %img{src: "/assets/images/konsento-logo.png"}
+    %span
+      Konsento
+
+  %div{layout: "column", flex: 33, layout-padding: true}
+    %div{layout: "row"}
+      %md-input-container{flex: true}
+        %label E-mail
+        %input{ng-model: "user.email", type: "email"}
+      %md-input-container{flex: true}
+        %label Senha
+        %input{ng-model: "user.password", type: "password"}
+
+    %div{layout: "row"}
+      %div{layout: "row", flex: true}
+        %md-button{flex: true, ng-href: "#/join"}
+          Cadastre-se
+      %div{layout: "row", flex: true}
+        %md-button{flex: true, ng-href: "#/join"}
+          Entrar
