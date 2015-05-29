@@ -12,6 +12,19 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
         templateUrl: "app/group/group.html",
         controller: "GroupCtrl"
 
+    $stateProvider
+      .state "sign-up",
+        url: "/sign-up",
+        templateUrl: "app/user/sign-up.html",
+        controller: "UserCtrl"
+
+    $stateProvider
+      .state "sign-in",
+        url: "/sign-in",
+        templateUrl: "app/user/sign-in.html",
+        controller: "UserCtrl"
+
+
     $urlRouterProvider.otherwise '/'
 
     $mdThemingProvider.theme('blue')
