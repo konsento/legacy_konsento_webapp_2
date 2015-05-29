@@ -16,3 +16,7 @@ angular.module "konsentoWebapp"
       { title: 'Rio de Janeiro', desc: "Discussões sobre assuntos estaduais cariocas" }
       { title: 'Minas Gerais', desc: "Discussões sobre assuntos estaduais mineiros" }
     ]
+
+  .directive 'ksGroupsList', ->
+    restrict: 'E'
+    templateUrl: 'app/main/ks-groups-list.html'

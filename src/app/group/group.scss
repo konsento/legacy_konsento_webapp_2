@@ -1,0 +1,19 @@
+#content {
+  .threads-list md-list-item {
+    a {
+      text-decoration: none;
+    }
+  }
+  .threads-list md-list-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .subgroups-list md-list-item {
+    a {
+      text-decoration: none;
+    }
+  }
+  .subgroups-list md-list-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}

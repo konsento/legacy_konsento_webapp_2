@@ -1,0 +1,5 @@
+%md-list.subgroups-list{layout: "column", flex: true}
+    %md-list-item.md-2-line{ng-repeat: "subgroup in subgroups", flex: true}
+      %a.md-list-item-text{ng-href: "#/group", ng-class: "md-offset", layout-padding: true}
+        %h3 {{subgroup.title}}
+        %p {{subgroup.desc}}

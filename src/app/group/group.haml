@@ -1,0 +1,44 @@
+%div{layout: "column", flex: true}
+  %div{ng-include: "'/app/components/header/header.html'"}
+
+  %div#content{layout: "column", flex: true}
+    %ks-toolbar
+
+    %md-content
+      %md-tabs{md-selected: "data.selectedIndex", md-align-tabs: "top", md-dynamic-height: true}
+        -# Hot
+        %md-tab
+          %md-tab-label
+            Em Destaque
+          %md-tab-body
+            %div{layout: "row"}
+              %ks-threads-list{flex: true}
+        -# Rising
+        %md-tab
+          %md-tab-label
+            Subindo
+          %md-tab-body
+            %div{layout: "row"}
+              %ks-threads-list{flex: true}
+        -# Controversial
+        %md-tab
+          %md-tab-label
+            Controversos
+          %md-tab-body
+            %div{layout: "row"}
+              %ks-threads-list{flex: true}
+        -# Top
+        %md-tab
+          %md-tab-label
+            No Topo
+          %md-tab-body
+            %div{layout: "row"}
+              %ks-threads-list{flex: true}
+        -# Subgroups
+        %md-tab
+          %md-tab-label
+            Subgrupos
+          %md-tab-body
+              %ks-subgroups-list{flex: true}
+
+  %div{ng-include: "'/app/components/footer/footer.html'"}

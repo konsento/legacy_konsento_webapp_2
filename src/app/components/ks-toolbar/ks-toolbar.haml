@@ -1,0 +1,12 @@
+%md-toolbar{md-theme: "blue"}
+  %div.md-toolbar-tools
+    %h2.md-flex#breadcrumbs{ng-repeat: "breadcrumb in breadcrumbs"}
+      %a{ng-href:"{{breadcrumb.url}}"}
+        {{breadcrumb.title}}
+      %span.divider{ng-hide: "{{$index == breadcrumbs.length-1}}"}
+        >
+    %span{flex: true}
+    %md-input-container#search-group-holder.md-hue-1{md-theme: "blue", md-no-float: true }
+      %input{ng-model: "search", placeholder: "Buscar"}
+    %md-button{aria-label: "Search"}
+      %md-icon{md-svg-icon: "search"}
