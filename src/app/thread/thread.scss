@@ -1,0 +1,60 @@
+.thread-wrapper{
+    background: $light-gray-bg;
+}
+md-tab-content{
+  background: white;
+}
+#thread {
+  .title {
+    color: $navy-blue;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  p {
+    padding: 10px 10px;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .proposal-action {
+    padding: 0px 3px
+  }
+  md-chips.md-default-theme .md-chips{
+    box-shadow: none;
+  }
+}
+#proposals {
+  p {
+    padding: 10px 10px;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .proposal-action {
+    padding: 0px 3px
+  }
+  md-chips.md-default-theme .md-chips{
+    box-shadow: none;
+  }
+}
+#thread-comments {
+  .title {
+    color: $navy-blue;
+    font-size: 28px;
+  }
+  .thread-comment {
+    background: #efefef;
+    padding: 10px;
+    a {
+      color: $navy-blue;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #2196F3;
+    }
+  }
+  md-chips.md-default-theme .md-chips{
+    box-shadow: none;
+  }
+  md-divider{
+    margin: 30px 0px;
+  }
+}

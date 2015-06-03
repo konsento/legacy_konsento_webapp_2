@@ -1,4 +1,10 @@
 #content {
+  md-list{
+    background: white
+  }
+  .threads-list{
+    background: $light-gray-bg;
+  }
   .threads-list{
     md-list-item {
       a {
@@ -13,6 +19,9 @@
     }
   }
 
+  .subgroups-list{
+    background: $light-gray-bg;
+  }
   .subgroups-list{
     md-list-item {
       a {

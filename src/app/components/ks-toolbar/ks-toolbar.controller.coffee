@@ -10,6 +10,13 @@ angular.module "konsentoWebapp"
         $scope.breadcrumbs.push
           title: 'Global'
           url: '/'
+      when 'thread'
+        $scope.breadcrumbs.push
+          title: 'Global'
+          url: '/'
         $scope.breadcrumbs.push
           title: 'Grupo'
           url: '/group'
+        $scope.breadcrumbs.push
+          title: 'Tópico'
+          url: '/thread'

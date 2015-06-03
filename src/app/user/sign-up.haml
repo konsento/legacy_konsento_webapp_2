@@ -1,2 +1,40 @@
-%p
-  Hello! ;)
+%div{layout: "column", flex: true, layout-align: "center center"}
+  %div.sign-up-box{layout: "column"}
+    %div{flex: true, offset: 25}
+      %img{ng-src: "/assets/images/logo.png"}
+    %p
+      Konsento
+
+
+    %div{layout: "row", flex: true}
+      %md-input-container.user{flex: true}
+        %label Nome
+        %input{ng-model: "user.name"}
+
+    %div{layout: "row", flex: true}
+      %md-input-container.user{flex: true}
+        %label Email
+        %input{ng-model: "user.email"}
+
+    %div{layout: "row", flex: true}
+      %md-input-container.user{flex: true}
+        %label Usuário
+        %input{ng-model: "user.name"}
+      %md-input-container.user{flex: true}
+        %label Usuário novamente
+        %input{ng-model: "user.reusername"}    
+
+    %div{layout: "row", flex: true}
+      %md-input-container.pass{flex: true}
+        %label Senha
+        %input{ng-model: "user.password", type: "password"}
+      %md-input-container.pass{flex: true}
+        %label Senha novamente
+        %input{ng-model: "user.repassword", type: "password"}
+
+
+
+    %div{layout: "row", flex: true}
+      %md-button.md-secondary{ng-href: "#/sign-in", md-no-ink: true, flex: true} Entrar
+      %md-button.md-primary{ng-href: "#/sign-up", md-no-ink: true, flex: true} Cadastrar
+    %md-button.md-secondary{ng-href: "#/", md-no-ink: true} Voltar

@@ -1,4 +1,11 @@
 #content {
+  md-list{
+    background: white
+  }
+  .groups-list{
+    background: $light-gray-bg;
+  }
+
   .groups-list md-list-item {
     a {
       text-decoration: none;
