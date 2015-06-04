@@ -10,11 +10,17 @@
       %md-chips
         %md-chip
           3 comentários
-      %md-icon{md-svg-icon: "message"}
+          %a.message-icon{ng-href:"#/"}
+            %md-icon{md-svg-icon: "message"}
+            %md-tooltip Ver comentários
 
     %div.proposal-action{layout: "row"}
       %md-chips
         %md-chip
           3 participações
-      %md-icon{md-svg-icon: "disagree"}
-      %md-icon{md-svg-icon: "agree"}
+          %a.agree-icon{ng-href: "#/"}
+            %md-icon{md-svg-icon: "agree", alt: "adasd"}
+            %md-tooltip Concordar
+          %a.disagree-icon{ng-href: "#/"}
+            %md-icon{md-svg-icon: "disagree"}
+            %md-tooltip Discordar

@@ -6,62 +6,74 @@
 
     %md-content
       %div.thread-wrapper{layout: "row"}
-        %md-card{flex: 70, offset:15}
+        %md-card{flex: 90, offset:5}
           %md-card-content
+            %div#thread-title
+              Titulo do tópico de exemplo aqui
             %div{layout: "row"}
               %div#thread{flex:true}
-                %div.title
-                  Titulo do tópico
-                %div
-                  %ks-proposal
-                  %ks-proposal
-                  %ks-proposal
+                %div.subtitle
+                  Tópico
+                %md-tabs{md-selected: "data4.selectedIndex4", md-align-tabs: "top", md-dynamic-height: true}
+                  %md-tab
+                    %md-tab-label
+                      Consenso
+                    %md-tab-body
+                        %ks-proposal.selected
+                        %ks-proposal
+                        %ks-proposal
 
               %div#proposals{flex:true}
-                  %md-tabs{md-selected: "data.selectedIndex", md-align-tabs: "top", md-dynamic-height: true}
-                    %md-tab
-                      %md-tab-label
-                        Popular
-                      %md-tab-body
-                          %ks-proposal
-                          %ks-proposal
-                          %ks-proposal
+                %div.subtitle
+                  Alterações para a proposta selecionada
+                %md-tabs{md-selected: "data.selectedIndex", md-align-tabs: "top", md-dynamic-height: true}
+                  %md-tab
+                    %md-tab-label
+                      Popular
+                    %md-tab-body
+                        %ks-proposal
+                        %ks-proposal
+                        %ks-proposal
 
-                    %md-tab
-                      %md-tab-label
-                        Topo
-                      %md-tab-body
-                          %ks-proposal
-                          %ks-proposal
-                          %ks-proposal
+                  %md-tab
+                    %md-tab-label
+                      Topo
+                    %md-tab-body
+                        %ks-proposal
+                        %ks-proposal
+                        %ks-proposal
 
-                    %md-tab
-                      %md-tab-label
-                        Recentes
-                      %md-tab-body
-                          %ks-proposal
-                          %ks-proposal
-                          %ks-proposal
+                  %md-tab
+                    %md-tab-label
+                      Recentes
+                    %md-tab-body
+                        %ks-proposal
+                        %ks-proposal
+                        %ks-proposal
 
             %div#thread-comments{layout: "column"}
               %md-divider
-              %div.title
-                Comentários
               %div
-                %md-subheader.md-primary
-                  Escreva seu comentário
-                %md-input-container
-                  %label Comentário
-                  %textarea
-              %div{layout: "row", layout-align:"end center"}
-                %md-button.md-primary{ng-href: "#/thread", md-no-ink: true} Enviar
-                
-              %div{layout: "column"}
-                %md-subheader.md-primary
-                  Comentários (10)
-                %ks-thread-comment
-                %ks-thread-comment
-                %ks-thread-comment
+                %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
+                  %md-tab
+                    %md-tab-label
+                      Escreva seu comentário
+                    %md-tab-body
+                      %md-input-container
+                        %label Comentário
+                        %textarea
+                      %div{layout: "row", layout-align:"end center"}
+                        %md-button.md-primary{ng-href: "#/thread", md-no-ink: true} Enviar
+
+              %div
+                %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
+                  %md-tab
+                    %md-tab-label
+                      Comentários (10)
+                    %md-tab-body
+                      %ks-thread-comment
+                      %ks-thread-comment
+                      %ks-thread-comment
 
 
   %div{ng-include: "'/app/components/footer/footer.html'"}
