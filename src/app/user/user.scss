@@ -39,5 +39,36 @@
   md-input-container   .pass{
     padding-bottom: 10px
   }
+}
 
+.account-box{
+  background: #fff;
+  padding: 10px 40px;
+
+  p{
+    text-align: center;
+    font-size: 28px;
+    color: $navy-blue;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .username{
+    margin-top: 20px;
+    .label{
+      color: $navy-blue;
+    }
+    .user{
+      color: #757575;
+      padding-left: 10px;
+    }
+  }
+
+  md-input-container .user{
+      padding-bottom: 0px;
+    }
+
+  md-input-container   .pass{
+    padding-bottom: 10px
+  }
 }

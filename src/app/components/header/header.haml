@@ -5,6 +5,15 @@
     %span
       Konsento
 
-  %div{layout: "row", layout-align: "end center", layout-padding: true}
+  %div{layout: "row", layout-align: "end center", layout-padding: true, ng-show: "false"}
     %md-button.md-primary{ng-href: "#/sign-up", md-no-ink: true} Cadastrar
     %md-button.md-primary{ng-href: "#/sign-in", md-no-ink: true} Entrar
+
+  %div.account-actions{layout: "row", layout-align: "end center", layout-padding: true, ng-show: "true"}
+    %md-button.profile-button{ng-href: "#/account", aria-label: "Profile"}
+      %md-icon{md-svg-icon: "perm_identity"}
+      %span
+        guiruiz
+      %md-tooltip Informações do perfil
+    %md-button.logout-button{ng-href: "#/sign-in", aria-label: "Logout"}
+      Sair

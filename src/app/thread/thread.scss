@@ -36,7 +36,11 @@ md-tab-content {
   }
 
   ks-proposal.selected .proposal-wrapper {
-    background: #E3F2FD;
+    background: #E3F2FD !important;
+  }
+  ks-proposal:hover .proposal-wrapper {
+    background: #EEEEEE;
+    cursor: pointer;
   }
 }
 
@@ -72,6 +76,9 @@ ks-proposal .proposal-wrapper {
     color: $navy-blue;
   }
 
+  .agree-icon {
+    margin-right: 5px;
+  }
   .agree-icon:hover md-icon {
     color: #4CAF50;
   }

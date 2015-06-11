@@ -1,0 +1,36 @@
+%div{layout: "column", flex: true, layout-align: "center center"}
+  %div.account-box{layout: "column"}
+    %div{flex: true, offset: 25}
+      %img{ng-src: "/assets/images/logo.png"}
+    %p
+      Konsento
+
+    %div.username{layout: "row", flex: true}
+      %span.label
+        Usuário:
+      %span.user
+        guiiruiz
+
+    %div{layout: "row", flex: true}
+      %md-input-container.user{flex: true}
+        %label Nome
+        %input{ng-model: "user.name"}
+
+    %div{layout: "row", flex: true}
+      %md-input-container.user{flex: true}
+        %label Email
+        %input{ng-model: "user.email", ng-value}
+ 
+    %div{layout: "row", flex: true}
+      %md-input-container.pass{flex: true}
+        %label Senha
+        %input{ng-model: "user.password", type: "password"}
+      %md-input-container.pass{flex: true}
+        %label Senha novamente
+        %input{ng-model: "user.repassword", type: "password"}
+
+
+
+    %div{layout: "row", flex: true}
+      %md-button.md-secondary{ng-href: "#/main", md-no-ink: true, flex: true} Voltar
+      %md-button.md-primary{ng-href: "#/account", md-no-ink: true, flex: true} Salvar

@@ -7,4 +7,16 @@ header{
       color: $navy-blue;
     }
   }
+  .account-actions{
+
+    .profile-button span{
+      color: #757575;
+      padding-left: 10px;
+      text-transform: lowercase;
+    }
+    .logout-button{
+      color: #757575;
+      text-transform: lowercase;
+    }
+  }
 }

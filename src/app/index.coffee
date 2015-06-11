@@ -25,6 +25,12 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
         controller: "UserCtrl"
 
     $stateProvider
+      .state "account",
+        url: "/account",
+        templateUrl: "app/user/account.html",
+        controller: "UserCtrl"
+
+    $stateProvider
       .state "thread",
         url: "/thread",
         templateUrl: "app/thread/thread.html",
@@ -39,9 +45,10 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
     $mdIconProvider
       .icon('search', 'bower_components/material-design-icons/action/svg/design/ic_search_48px.svg')
       .icon('message', 'bower_components/material-design-icons/communication/svg/design/ic_message_48px.svg')
-      .icon('agree', 'bower_components/material-design-icons/social/svg/design/ic_mood_48px.svg')
-      .icon('disagree', 'bower_components/material-design-icons/social/svg/design/ic_mood_bad_48px.svg')
+      .icon('agree', 'bower_components/material-design-icons/action/svg/design/ic_thumb_up_48px.svg')
+      .icon('disagree', 'bower_components/material-design-icons/action/svg/design/ic_thumb_down_48px.svg')
       .icon('reply', 'bower_components/material-design-icons/content/svg/design/ic_reply_48px.svg')
+      .icon('perm_identity', 'bower_components/material-design-icons/action/svg/design/ic_account_circle_48px.svg')
       .icon('chevron-right', 'bower_components/material-design-icons/navigation/svg/design/ic_chevron_right_48px.svg')
 
   .directive 'ksToolbar', ->
