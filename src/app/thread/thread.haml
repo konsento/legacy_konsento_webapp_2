@@ -19,9 +19,7 @@
                     %md-tab-label
                       Consenso
                     %md-tab-body
-                        %ks-proposal.selected
-                        %ks-proposal
-                        %ks-proposal
+                        %ks-consensus
 
               %div#proposals{flex:true}
                 %div.subtitle
@@ -31,25 +29,19 @@
                     %md-tab-label
                       Popular
                     %md-tab-body
-                        %ks-proposal
-                        %ks-proposal
-                        %ks-proposal
+                        %ks-proposals{ng-repeat: "proposal in selectedConsensus.proposals.popular"}
 
                   %md-tab
                     %md-tab-label
                       Topo
                     %md-tab-body
-                        %ks-proposal
-                        %ks-proposal
-                        %ks-proposal
+                        %ks-proposals{ng-repeat: "proposal in selectedConsensus.proposals.hot"}
 
                   %md-tab
                     %md-tab-label
                       Recentes
                     %md-tab-body
-                        %ks-proposal
-                        %ks-proposal
-                        %ks-proposal
+                        %ks-proposals{ng-repeat: "proposal in selectedConsensus.proposals.recents"}
 
             %div#thread-comments{layout: "column"}
               %md-divider
@@ -59,21 +51,21 @@
                     %md-tab-label
                       Escreva seu comentário
                     %md-tab-body
-                      %md-input-container
-                        %label Comentário
-                        %textarea
-                      %div{layout: "row", layout-align:"end center"}
-                        %md-button.md-primary{ng-href: "#/thread", md-no-ink: true} Enviar
+                      %form{ng-submit: "addComment()"}
+                        %md-input-container
+                          %label Comentário
+                          %textarea{ng-model: "newComment.content"}
+                        %div{layout: "row", layout-align:"end center"}
+                          %md-button.md-primary{ md-no-ink: true, type: "submit"}
+                            Enviar
 
               %div
                 %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
                   %md-tab
                     %md-tab-label
-                      Comentários (10)
+                      Comentários ({{comments.length}})
                     %md-tab-body
-                      %ks-thread-comment
-                      %ks-thread-comment
-                      %ks-thread-comment
+                      %ks-thread-comments
 
 
   %div{ng-include: "'/app/components/footer/footer.html'"}

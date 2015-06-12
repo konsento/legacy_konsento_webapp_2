@@ -27,22 +27,61 @@ md-tab-content {
     text-align: justify;
   }
 
-  .proposal-action {
-    padding: 0px 3px
+  .proposal-actions{
+    font-size: 13px;
+    background: rgb(224,224,224);
+    padding: 3px 5px;
+    border-radius: 10px;
   }
 
-  md-chips.md-default-theme .md-chips {
-    box-shadow: none;
+  .proposal-actions div {
+    padding: 0px 3px;
   }
-
-  ks-proposal.selected .proposal-wrapper {
+  ks-consensus div.proposal-wrapper.selected{
+    background: #BBDEFB;
+  }
+  ks-consensus div.proposal-wrapper{
+    padding: 5px 5px;
+  }
+  ks-consensus div.proposal-wrapper.ng-click-active{
+    background: #90CAF9;
+  }
+  ks-consensus.selected .proposal-wrapper {
     background: #E3F2FD !important;
   }
-  ks-proposal:hover .proposal-wrapper {
+  ks-consensus .proposal-wrapper:hover {
     background: #EEEEEE;
     cursor: pointer;
   }
+
+  ks-consensus .proposal-wrapper {
+    .message-icon md-icon, .disagree-icon md-icon, .agree-icon md-icon  {
+      height: 20px;
+      width: 20px;
+    }
+
+    .message-icon:hover md-icon {
+      color: $navy-blue;
+    }
+
+    .agree-icon {
+      margin-right: 5px;
+    }
+    .agree-icon:hover md-icon {
+      color: #4CAF50;
+    }
+
+    .disagree-icon:hover md-icon {
+      color: #F44336;
+    }
+
+    .message-icon, .agree-icon  {
+      margin-left: 10px;
+    }
+  }
 }
+
+
 
 #proposals {
   padding-left: 10px;
@@ -56,41 +95,49 @@ md-tab-content {
     font-size: 14px;
     text-align: justify;
   }
-
-  .proposal-action  {
-    padding: 0px 3px
+  .proposal-actions{
+    font-size: 13px;
+    background: rgb(224,224,224);
+    padding: 3px 5px;
+    border-radius: 10px;
   }
 
-  md-chips.md-default-theme .md-chips {
-    box-shadow: none;
+  .proposal-actions div {
+    padding: 0px 3px;
+  }
+
+  ks-proposals div.proposal-wrapper{
+    padding: 5px 5px;
+  }
+
+  ks-proposals .proposal-wrapper {
+    .message-icon md-icon, .disagree-icon md-icon, .agree-icon md-icon  {
+      height: 20px;
+      width: 20px;
+    }
+
+    .message-icon:hover md-icon {
+      color: $navy-blue;
+    }
+
+    .agree-icon {
+      margin-right: 5px;
+    }
+    .agree-icon:hover md-icon {
+      color: #4CAF50;
+    }
+
+    .disagree-icon:hover md-icon {
+      color: #F44336;
+    }
+
+    .message-icon, .agree-icon  {
+      margin-left: 10px;
+    }
   }
 }
 
-ks-proposal .proposal-wrapper {
-  .message-icon md-icon, .disagree-icon md-icon, .agree-icon md-icon  {
-    height: 20px;
-    width: 20px;
-  }
 
-  .message-icon:hover md-icon {
-    color: $navy-blue;
-  }
-
-  .agree-icon {
-    margin-right: 5px;
-  }
-  .agree-icon:hover md-icon {
-    color: #4CAF50;
-  }
-
-  .disagree-icon:hover md-icon {
-    color: #F44336;
-  }
-
-  .message-icon, .agree-icon  {
-    margin-left: 10px;
-  }
-}
 
 #thread-comments {
   .subtitle  {
@@ -111,20 +158,29 @@ ks-proposal .proposal-wrapper {
     }
 
   }
-
+  .reply-icon md-icon  {
+    height: 20px;
+    width: 20px;
+  }
   .reply-icon {
-    padding-top: 10px;
+    padding-left: 5px;
   }
 
   .reply-icon:hover md-icon {
     color: $navy-blue;
   }
+  .comment-actions{
+    font-size: 13px;
+    background: rgb(224,224,224);
+    padding: 3px 5px;
+    border-radius: 10px;
+  }
 
-  md-chips.md-default-theme .md-chips {
-    box-shadow: none;
+  .comment-actions div {
+    padding: 0px 3px;
   }
 
   md-divider {
-    margin: 30px 0px;
+    margin-top: 30px;
   }
 }

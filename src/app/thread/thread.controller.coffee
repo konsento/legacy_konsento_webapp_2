@@ -1,21 +1,39 @@
 angular.module "konsentoWebapp"
   .controller "ThreadCtrl", ($scope) ->
-    $scope.proposalSelectedIndex = 1
-
-    $scope.proposals = [
-      { id: 1, texto: "A" }
-      { id: 2, texto: "B" }
-      { id: 3, texto: "c" }
+    propSample = [{id: 21, text: "Lorem "},{id: 22, text: "Lorem "},{id: 23, text: "Lorem "}]
+    $scope.consensus = [
+      { id: 1, text: "A", proposals: {hot: propSample, popular: propSample, recents: propSample}},
+      { id: 2, text: "B", proposals: {hot: propSample, popular: propSample, recents: propSample}},
+      { id: 3, text: "C", proposals: {hot: propSample, popular: propSample, recents: propSample}}
     ]
-    console.log $scope.proposals
-    $scope.proposalClickEvent = (i) ->
-      console.log i.currentTarget.attribute("role")
-      #$scope.proposalSelectedIndex = i
+
+    $scope.selectedConsensusId = 1
+    $scope.selectedConsensus = $scope.consensus[0]
+
+    $scope.consensusClickEvent = (proposal) ->
+      $scope.selectedConsensusId = proposal.id
+      $scope.selectedConsensus = proposal
+      return
+    #-----------------------------------------------------------------------
+    $scope.comments = [
+        {id: 1, content: "A", user: {username: "guilherme_dias"}}
+        {id: 2, content: "B", user: {username: "felipe_costa"}},
+        {id: 3, content: "C", user: {username: "fabio_souza"}},
+    ]
+
+    $scope.newComment = {id: 4, user: {username:"guiiruiz"}}
+    $scope.addComment = () ->
+      $scope.comments.push($scope.newComment)
+      $scope.newComment = {id: 4, user: {username:"guiiruiz"}}
       return
 
-  .directive 'ksProposal', ->
+
+  .directive 'ksProposals', ->
     restrict: 'E'
-    templateUrl: 'app/thread/ks-proposal.html'
-  .directive 'ksThreadComment', ->
+    templateUrl: 'app/thread/ks-proposals.html'
+  .directive 'ksConsensus', ->
     restrict: 'E'
-    templateUrl: 'app/thread/ks-thread-comment.html'
+    templateUrl: 'app/thread/ks-consensus.html'
+  .directive 'ksThreadComments', ->
+    restrict: 'E'
+    templateUrl: 'app/thread/ks-thread-comments.html'
