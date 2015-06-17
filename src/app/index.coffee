@@ -8,7 +8,7 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
 
     $stateProvider
       .state "group",
-        url: "/group",
+        url: "/group/:groupId",
         templateUrl: "app/group/group.html",
         controller: "GroupCtrl"
 
@@ -32,7 +32,7 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
 
     $stateProvider
       .state "thread",
-        url: "/thread",
+        url: "/thread/:threadId",
         templateUrl: "app/thread/thread.html",
         controller: "ThreadCtrl"
 
@@ -43,6 +43,7 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
       .primaryPalette('blue')
 
     $mdIconProvider
+      .icon('close', 'bower_components/material-design-icons/content/svg/design/ic_clear_48px.svg')
       .icon('search', 'bower_components/material-design-icons/action/svg/design/ic_search_48px.svg')
       .icon('message', 'bower_components/material-design-icons/communication/svg/design/ic_message_48px.svg')
       .icon('agree', 'bower_components/material-design-icons/action/svg/design/ic_thumb_up_48px.svg')

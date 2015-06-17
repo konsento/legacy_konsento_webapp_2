@@ -1,0 +1,53 @@
+#proposal-comments{
+  .selected-proposal {
+    font-style: italic;
+    font-size: 13px;
+    color: #757575;
+  }
+}
+
+#comments-wrapper {
+  .subtitle  {
+    color: $navy-blue;
+    font-size: 28px;
+  }
+
+  .proposal-comment  {
+    background: #efefef;
+    padding: 10px;
+    a  {
+      color: $navy-blue;
+      text-decoration: none;
+    }
+
+    a:hover  {
+      color: #2196F3;
+    }
+
+  }
+  .reply-icon md-icon  {
+    height: 20px;
+    width: 20px;
+  }
+  .reply-icon {
+    padding-left: 5px;
+  }
+
+  .reply-icon:hover md-icon {
+    color: $navy-blue;
+  }
+  .comment-actions{
+    font-size: 13px;
+    background: rgb(224,224,224);
+    padding: 3px 5px;
+    border-radius: 10px;
+  }
+
+  .comment-actions div {
+    padding: 0px 3px;
+  }
+
+  md-divider {
+    margin-top: 30px;
+  }
+}

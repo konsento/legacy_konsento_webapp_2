@@ -54,6 +54,11 @@ md-tabs.md-default-theme {
   }
 }
 
+md-tooltip.md-default-theme {
+  position: absolute;
+}
+
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector

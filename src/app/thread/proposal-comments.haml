@@ -1,0 +1,46 @@
+%md-dialog{aria-label: "Mango (Fruit)"}
+  %form
+    %md-toolbar{md-theme: "blue"}
+      .md-toolbar-tools
+        %h2 Comentários
+        %span{:flex: ""}
+        %md-button.md-icon-button{ng-click: "answer('not applicable')"}
+          %md-icon{md-svg-icon: "close", aria-label: "Close dialog"}
+    %md-dialog-content
+      %div#proposal-comments
+        %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
+          %md-tab
+            %md-tab-label
+              Proposta selecionada
+            %md-tab-body
+              %p.selected-proposal
+                Aorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                doloremagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum...
+        %md-divider
+        %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
+          %md-tab
+            %md-tab-label
+              Escreva seu comentário
+            %md-tab-body
+              %form{ng-submit: "addComment()"}
+                %md-input-container
+                  %label Comentário
+                  %textarea{ng-model: "newComment.content"}
+                %div{layout: "row", layout-align:"end center"}
+                  %md-button.md-primary{ md-no-ink: true, type: "submit"}
+                    Enviar
+
+        %md-tabs{md-selected: "data2.selectedIndex2", md-align-tabs: "top", md-dynamic-height: true}
+          %md-tab
+            %md-tab-label
+              Comentários (10)
+            %md-tab-body
+              %div#comments-wrapper
+                %ks-proposal-comments
+
+    .md-actions{:layout: "row"}
+      %md-button.md-primary{ng-click: "answer('useful')"}
+        Fechar

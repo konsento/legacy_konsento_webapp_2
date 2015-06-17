@@ -3,6 +3,6 @@
     %md-card-content
       %md-list{layout: "column", flex: true}
         %md-list-item.md-2-line{ng-repeat: "group in groups", flex: true}
-          %a.md-list-item-text{ng-href: "#/group", ng-class: "md-offset", layout-padding: true}
+          %a.md-list-item-text{ng-href: "#/group/{{group.id}}", ng-class: "md-offset", layout-padding: true}
             %h3 {{group.title}}
             %p {{group.desc}}

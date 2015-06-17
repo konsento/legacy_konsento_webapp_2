@@ -1,10 +1,10 @@
 angular.module "konsentoWebapp"
-  .controller "ThreadCtrl", ($scope) ->
-    propSample = [{id: 21, text: "Lorem "},{id: 22, text: "Lorem "},{id: 23, text: "Lorem "}]
+  .controller "ThreadCtrl", ($scope, $mdDialog) ->
+    proposalSample = [{id: 21, text: "Lorem "},{id: 22, text: "Lorem "},{id: 23, text: "Lorem "}]
     $scope.consensus = [
-      { id: 1, text: "A", proposals: {hot: propSample, popular: propSample, recents: propSample}},
-      { id: 2, text: "B", proposals: {hot: propSample, popular: propSample, recents: propSample}},
-      { id: 3, text: "C", proposals: {hot: propSample, popular: propSample, recents: propSample}}
+      { id: 1, text: "A", proposals: {hot: proposalSample, popular: proposalSample, recents: proposalSample}},
+      { id: 2, text: "B", proposals: {hot: proposalSample, popular: proposalSample, recents: proposalSample}},
+      { id: 3, text: "C", proposals: {hot: proposalSample, popular: proposalSample, recents: proposalSample}}
     ]
 
     $scope.selectedConsensusId = 1
@@ -16,11 +16,12 @@ angular.module "konsentoWebapp"
       return
     #-----------------------------------------------------------------------
     $scope.comments = [
-        {id: 1, content: "A", user: {username: "guilherme_dias"}}
-        {id: 2, content: "B", user: {username: "felipe_costa"}},
-        {id: 3, content: "C", user: {username: "fabio_souza"}},
+        {id: 1, content: "Nice", user: {username: "guilherme_dias"}}
+        {id: 2, content: "I liked it.", user: {username: "felipe_costa"}},
+        {id: 3, content: "Awsome", user: {username: "fabio_souza"}},
     ]
 
+    #- $scope.newComment = {}
     $scope.newComment = {id: 4, user: {username:"guiiruiz"}}
     $scope.addComment = () ->
       $scope.comments.push($scope.newComment)
@@ -28,6 +29,18 @@ angular.module "konsentoWebapp"
       return
 
 
+    #-----------------------------------------------------------------------
+    $scope.showProposalCommentsDialog = (ev) ->
+      $mdDialog.show(
+        controller: "ProposalCommentsCtrl"
+        templateUrl: 'app/thread/proposal-comments.html'
+        parent: angular.element(document.body)
+        targetEvent: ev
+      )
+      return
+
+
+    #-----------------------------------------------------------------------
   .directive 'ksProposals', ->
     restrict: 'E'
     templateUrl: 'app/thread/ks-proposals.html'

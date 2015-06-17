@@ -7,8 +7,8 @@ angular.module "konsentoWebapp"
     ]
 
     $scope.groups = [
-      { title: 'Brasil', desc: "Discussões sobre assuntos federais brasileiros" }
-      { title: 'EUA', desc: "Discussions about american federal subjects" }
+      { id: 1, title: 'Brasil', desc: "Discussões sobre assuntos federais brasileiros" }
+      { id: 2, title: 'EUA', desc: "Discussions about american federal subjects" }
     ]
 
     $scope.subgroups = [
