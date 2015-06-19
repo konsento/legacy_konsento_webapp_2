@@ -39,6 +39,14 @@ angular.module "konsentoWebapp"
       )
       return
 
+    #-----------------------------------------------------------------------
+    $scope.onProposalUpVote = (proposal) ->
+      alert(proposal.id)
+      return
+
+    $scope.onProposalDownVote = (proposal) ->
+      alert(0)
+      return
 
     #-----------------------------------------------------------------------
   .directive 'ksProposals', ->

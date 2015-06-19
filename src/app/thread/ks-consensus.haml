@@ -15,9 +15,9 @@
 
       %div{layout: "row"}
         3 participações
-        %a.agree-icon{ng-href: "#/"}
-          %md-icon{md-svg-icon: "agree", alt: "adasd"}
+        %a.agree-icon{ng-click: "onProposalUpVote(proposal)"}
+          %md-icon{md-svg-icon: "agree"}
           /%md-tooltip Concordar
-        %a.disagree-icon{ng-href: "#/"}
+        %a.disagree-icon{ng-click: "onProposalDownVote(proposal)"}
           %md-icon{md-svg-icon: "disagree"}
           /%md-tooltip Discordar

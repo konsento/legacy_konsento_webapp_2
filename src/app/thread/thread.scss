@@ -125,10 +125,12 @@ md-tab-content {
     }
     .agree-icon:hover md-icon {
       color: #4CAF50;
+      cursor: pointer;
     }
 
     .disagree-icon:hover md-icon {
       color: #F44336;
+      cursor: pointer;
     }
 
     .message-icon, .agree-icon  {
