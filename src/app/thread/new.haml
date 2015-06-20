@@ -1,0 +1,51 @@
+%div{layout: "column", flex: true}
+  %div{ng-include: "'/app/components/header/header.html'"}
+
+  %div#content{layout: "column", flex: true}
+    %ks-toolbar
+
+    %div#new-thread-wrapper{layout: "row"}
+      %md-card{flex: 70, offset:15}
+        %md-card-content
+          %h2
+            Criar novo tópico
+
+          %div{layout: "row", flex: true}
+            %md-select{flex: 50, placeholder: "Grupo", ng-model: "userGroup"}
+              %md-option{ng-repeat: "group in groups",value: "{{group}}"}
+                {{group}}
+
+          %div{layout: "row", flex: true}
+            %md-select{flex: 50, placeholder: "Subgrupo", ng-model: "userSubgroup"}
+              %md-option{ng-repeat: "subgroup in subgroups",value: "{{subgroup}}"}
+                {{subgroup}}
+
+          %div{layout: "row", flex: true}
+            %md-input-container{flex: 50}
+              %label Título
+              %input{ng-model: "thread.title"}
+
+          %div.proposal
+            %div{layout: "row", flex: true}
+              %md-input-container{flex: true}
+                %label Parágrafo
+                %textarea
+            %div{layout: "row", flex: true}
+              %md-input-container{flex: true}
+                %label Referência
+                %input
+          %div{layout: "row", layout-align:"end center"}
+            %md-button.md-primary.add-proposal{ md-no-ink: true}
+              %md-icon{md-svg-icon: "add"}
+              Parágrafo
+
+          %div{layout: "row", flex: true}
+            %md-input-container{flex: true}
+              %label Tags
+              %input{ng-model: "thread.tags"}
+
+          %div{layout: "row", layout-align:"end center"}
+            %md-button.md-primary{ md-no-ink: true}
+              Salvar
+
+  %div{ng-include: "'/app/components/footer/footer.html'"}

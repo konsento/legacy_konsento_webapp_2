@@ -20,3 +20,7 @@ angular.module "konsentoWebapp"
         $scope.breadcrumbs.push
           title: 'Tópico'
           url: '/thread'
+      when 'new-thread'
+        $scope.breadcrumbs.push
+          title: 'Criar novo tópico'
+          url: '/thread'

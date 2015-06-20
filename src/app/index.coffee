@@ -36,6 +36,12 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
         templateUrl: "app/thread/thread.html",
         controller: "ThreadCtrl"
 
+    $stateProvider
+      .state "new-thread",
+        url: "/new-thread",
+        templateUrl: "app/thread/new.html",
+        controller: "NewThreadCtrl"
+
 
     $urlRouterProvider.otherwise '/'
 
@@ -51,6 +57,7 @@ angular.module 'konsentoWebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSaniti
       .icon('reply', 'bower_components/material-design-icons/content/svg/design/ic_reply_48px.svg')
       .icon('perm_identity', 'bower_components/material-design-icons/action/svg/design/ic_account_circle_48px.svg')
       .icon('chevron-right', 'bower_components/material-design-icons/navigation/svg/design/ic_chevron_right_48px.svg')
+      .icon('add', 'bower_components/material-design-icons/content/svg/design/ic_add_circle_outline_48px.svg')
 
   .directive 'ksToolbar', ->
     {
